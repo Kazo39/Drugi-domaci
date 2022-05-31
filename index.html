@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div class="row">
+     <div class="col-10"></div>
+       <div class="col-2 ">
+           <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal" id="openModal">
+        Dodaj novi film
+        </button>
+       </div>
+   </div>
+   
+<div class="container">
+  
+
+
+    <div class="table">
+        <div class="row mt-4">
+            <div class="col-2" >Odgledan</div>
+            <div class="col-2">Naziv</div>
+            <div class="col-2">Godina</div>
+            <div class="col-2">Država</div>
+            <div class="col-2">Napomena</div>
+            <div class="col-2">Glumci</div>
+        </div>
+        <div class="m-2" id="tableBody"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Dodaj film</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row mt-3">
+              <div class="col">
+                <input type="text" class="form-control clearInputs" placeholder="Naziv filma"  id="movieNameInput" >
+                <span id="nameWarning" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <input type="number" min="1930" max="2021" class="form-control clearInputs" placeholder="Godina" id="yearInput">
+                <span id="releaseDateWarning" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <input type="text" class="form-control clearInputs" placeholder="Drzava" id="countryInput">
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <input type="text" class="form-control clearInputs" placeholder="Napomena" id="noteInput">
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <textarea  class="form-control clearInputs" placeholder="Glumci"  id="actorsInput"></textarea>
+                <span id="actorsWarning" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="row mt-3 mb-3">
+              <div class="col">
+                <label for="watchedInput" class="control-label ">Odgledan</label>
+                <input type="checkbox" id="watchedInput" class="form-check-input ms-2">
+              </div>
+              
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Izadji</button>
+          <button type="button" class="btn btn-primary" id="inputSave">Sacuvaj</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
