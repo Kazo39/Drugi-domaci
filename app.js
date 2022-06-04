@@ -91,7 +91,6 @@ function getUserInput(){
 
     if(new_movie_name != "" && new_movie_actors != "" && movieReleaseDateInd){
         return {
-            odgledan: false,
             naziv : new_movie_name,
             godina : new_movie_release_date,
             napomena: new_movie_note,
